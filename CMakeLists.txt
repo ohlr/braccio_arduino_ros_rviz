@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(ros_braccio_urdf)
+project(braccio_arduino_ros_gazebo)
 
 find_package(catkin REQUIRED)
 catkin_package()
 
-install(DIRECTORY images meshes launch rviz urdf
+install(DIRECTORY launch urdf stl rviz
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
