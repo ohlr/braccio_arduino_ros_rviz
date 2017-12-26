@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package>
+  <name>ros_braccio_urdf</name>
+  <version>0.0.0</version>
+  <description>The ros_braccio_urdf package</description>
+
+  <maintainer email="jimenojmm@gmail.com">Juan Jimeno</maintainer>
+  <license>BSD</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>roslaunch</build_depend>
+  <run_depend>joint_state_publisher</run_depend>
+  <run_depend>robot_state_publisher</run_depend>
+  <run_depend>rviz</run_depend>
+  <run_depend>xacro</run_depend>
+
+  <export>
+
+  </export>
+</package>

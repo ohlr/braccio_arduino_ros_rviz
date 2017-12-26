@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<robot name="visual">
+    <link name="base_link">
+        <visual>
+            <geometry>
+                <cylinder length="0.01" radius=".053" />
+            </geometry>
+            <material name="black" />
+            <origin rpy="0 0 0" xyz="0 0 0" />
+        </visual>
+    </link>
+
+    <link name="braccio_base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://ros_braccio_urdf/stl/braccio_base.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange" />
+            <origin rpy="0 0 3.1416" xyz="0 0.004 0" />
+        </visual>
+    </link>
+
+    <link name="shoulder_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://ros_braccio_urdf/stl/braccio_shoulder.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange" />
+            <origin rpy="0 0 0" xyz="-0.0045 0.0055 -0.026" />
+        </visual>
+    </link>
+
+    <link name="elbow_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://ros_braccio_urdf/stl/braccio_elbow.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange" />
+            <origin rpy="0 0 0" xyz="-0.0045 0.005 -0.025" />
+        </visual>
+    </link>
+
+    <link name="wrist_pitch_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://ros_braccio_urdf/stl/braccio_wrist_pitch.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="orange" />
+            <origin rpy="0 0 0" xyz="0.003 -0.0004 -0.024" />
+        </visual>
+    </link>
+
+    <link name="wrist_roll_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://ros_braccio_urdf/stl/braccio_wrist_roll.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="white" />
+            <origin rpy="0 0 0" xyz="0.006 0 0.0" />
+        </visual>
+    </link>
+
+    <link name="left_gripper_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://ros_braccio_urdf/stl/braccio_left_gripper.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="white" />
+            <origin rpy="0 1.5708 0" xyz="0 -0.012 0" />
+        </visual>
+    </link>
+
+    <link name="right_gripper_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://ros_braccio_urdf/stl/braccio_right_gripper.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+            <material name="white" />
+            <origin rpy="0 1.5708 0" xyz="0 -0.012 0.010" />
+        </visual>
+    </link>
+
+    <joint name="base_joint" type="revolute">
+        <axis xyz="0 0 -1" />
+        <limit effort="1000.0" lower="0.0" upper="3.1416" velocity="1.0" />
+        <origin rpy="0 0 0" xyz="0 0 0" />
+        <parent link="base_link" />
+        <child link="braccio_base_link" />
+    </joint>
+
+    <joint name="shoulder_joint" type="revolute">
+        <axis xyz="1 0 0" />
+        <limit effort="1000.0" lower="0.2618" upper="2.8798" velocity="1.0" />
+        <origin rpy="-1.5708 0 0" xyz="0 -.002 0.072" />
+        <parent link="braccio_base_link" />
+        <child link="shoulder_link" />
+    </joint>
+
+    <joint name="elbow_joint" type="revolute">
+        <axis xyz="1 0 0" />
+        <limit effort="1000.0" lower="0" upper="3.1416" velocity="1.0" />
+        <origin rpy="-1.5708 0 0" xyz="0 0 0.125" />
+        <parent link="shoulder_link" />
+        <child link="elbow_link" />
+    </joint>
+
+    <joint name="wrist_pitch_joint" type="revolute">
+        <axis xyz="1 0 0" />
+        <limit effort="1000.0" lower="0" upper="3.1416" velocity="1.0" />
+        <origin rpy="-1.5708 0 0" xyz="0 0 0.125" />
+        <parent link="elbow_link" />
+        <child link="wrist_pitch_link" />
+    </joint>
+
+    <joint name="wrist_roll_joint" type="revolute">
+        <axis xyz="0 0 -1" />
+        <limit effort="1000.0" lower="0.0" upper="3.1416" velocity="1.0" />
+        <origin rpy="0 0 0" xyz="0 0.0 0.06" />
+        <parent link="wrist_pitch_link" />
+        <child link="wrist_roll_link" />
+    </joint>
+
+    <joint name="gripper_joint" type="revolute">
+        <axis xyz="0 -1 0" />
+        <limit effort="1000.0" lower="1.217" upper="1.5708" velocity="1.0" />
+        <origin rpy="0 0 0" xyz="0.010 0 0.03" />
+        <parent link="wrist_roll_link" />
+        <child link="right_gripper_link" />
+    </joint>
+
+    <joint name="sub_gripper_joint" type="revolute">
+        <axis xyz="0 1 0" />
+        <mimic joint="gripper_joint" />
+        <limit effort="1000.0" lower="1.5708" upper="2.7876" velocity="1.0" />
+        <origin rpy="0 3.1416 0" xyz="-0.010 0 0.03" />
+        <parent link="wrist_roll_link" />
+        <child link="left_gripper_link" />
+    </joint>
+
+    <material name="orange">
+        <color rgba="0.57 0.17 0.0 1" />
+    </material>
+    <material name="white">
+        <color rgba="0.8 0.8 0.8 1.0" />
+    </material>
+    <material name="black">
+        <color rgba="0 0 0 0.50" />
+    </material>
+</robot>
