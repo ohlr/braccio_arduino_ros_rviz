@@ -1,9 +1,13 @@
-# Braccio-Arduino-ROS-Rviz
+# Braccio-Arduino-ROS-RViz
 Project on the integration of the Arduino robotic arm Braccio into ROS and Rviz.
 
 ![demo](Demo/Demo.gif)
 
-With this Code it is possible to control the joint angles of Braccio from a GUI.
+This project enables to control the joint angles of Braccio from a GUI.
+
+## Want to say thanks
+
+ This code is free and can be used for free, open source and commercial applications. It's tested and contributed by many people... So mainly hit the :star: button, that's all 
 
 
 ## Prerequisites:
@@ -85,3 +89,10 @@ overview about the topics and nodes
 Should look similar like this:
 
 ![Alt text](Demo/rosgraph.png)
+
+## License
+
+
+This project is licensed under  BSD 3-Clause License License - see the [LICENSE.md](LICENSE.md) file for details
+
+This project contains code from [grassjelly](https://github.com/grassjelly/ros_braccio_urdf) [LicenseOfRelatedProjects](Licenses_Related_Projects.md)
