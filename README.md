@@ -8,14 +8,14 @@ With this Code it is possible to control the joint angles of Braccio from a GUI.
 
 ## Prerequisites:
 
-```ruby
+
 ROS (![Kinetic Kame](http://wiki.ros.org/kinetic))
 	- RViz
 	- ROSserial
 Ubuntu (16.04)
 Arduino (Uno)
-![Braccio Robot](https://store.arduino.cc/tinkerkit-braccio)
-```
+[Braccio Robot](https://store.arduino.cc/tinkerkit-braccio)
+
 
 
 Terminal 1:
