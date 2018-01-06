@@ -7,7 +7,7 @@ This project enables to control the joint angles of Braccio from a GUI.
 
 ## Want to say thanks
 
- This code is free and can be used for free, open source and commercial applications. It's tested and contributed by many people... So mainly hit the :star: button, that's all 
+ This code is free and can be used for free, open source and commercial applications. If you want to say thanks mainly hit the :star: button, that's all. 
 
 
 ## Prerequisites:
@@ -95,4 +95,4 @@ Should look similar like this:
 
 This project is licensed under  BSD 3-Clause License License - see the [LICENSE.md](LICENSE.md) file for details
 
-This project contains code from [grassjelly](https://github.com/grassjelly/ros_braccio_urdf) [LicenseOfRelatedProjects](Licenses_Related_Projects.md)
+This project contains code from [grassjelly](https://github.com/grassjelly/ros_braccio_urdf), see third Party License file [LicenseOfThirdPartys](Licenses_Related_Projects.md)
