@@ -51,4 +51,20 @@ Terminal 5 (optional/Debugging):
 	rostopic echo joint_array
 ```
 
-view what is published
+view what is published to the Arduino
+
+```ruby
+	rostopic echo joint_states
+```
+
+view what is published by the joint_state_publisher (GUI)
+
+```ruby
+rqt_graph
+```
+
+overview about the topics and nodes
+
+Should look similar like this:
+
+![Alt text](Demo/rosgraph.png)
