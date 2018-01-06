@@ -1,6 +1,8 @@
 # Braccio-Arduino-ROS-Rviz
 Project on the integration of the Arduino robotic arm Braccio into ROS and Rviz.
 
+![demo](Demo/demo.gif)
+
 With this Code it is possible to control the joint angles of Braccio from a GUI.
 
 
