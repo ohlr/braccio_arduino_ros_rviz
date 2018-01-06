@@ -34,13 +34,3 @@ Terminal 5 (optional):
 	rostopic echo joint_array
 
 
-rosrun braccio_arduino_ros_gazebo listener
-
-roslaunch braccio_arduino_ros_gazebo urdf.launch model:=urdf/braccio_arm.urdf
-
-roslaunch braccio_arduino_ros_gazebo gazeboxacro.launch model:=urdf/braccio_arm.urdf
-
-roslaunch braccio_arduino_ros_gazebo gazebo.launch model:=urdf/braccio_arm.urdf
-
-rostopic echo /joint_states/position
-
