@@ -6,10 +6,16 @@ Project on the integration of the Arduino robotic arm Braccio into ROS and Rviz.
 With this Code it is possible to control the joint angles of Braccio from a GUI.
 
 
-## Setup:
-Dependencies ROS Kinetic
-Arduino Uno
-Braccio
+## Prerequisites:
+
+```ruby
+ROS ([Kinetic Kame](http://wiki.ros.org/kinetic))
+	- RViz
+	- ROSserial
+Ubuntu (16.04)
+Arduino (Uno)
+[Braccio Robot](https://store.arduino.cc/tinkerkit-braccio)
+```
 
 
 Terminal 1:
@@ -60,7 +66,7 @@ view what is published to the Arduino
 view what is published by the joint_state_publisher (GUI)
 
 ```ruby
-rqt_graph
+	rqt_graph
 ```
 
 overview about the topics and nodes
