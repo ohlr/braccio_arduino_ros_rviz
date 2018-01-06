@@ -23,7 +23,10 @@ This project enables to control the joint angles of Braccio from a GUI.
 ## Setup
 * Install ROS on your PC.
 * Clone this repository into your Catkin Workspace.
-* Run catkin_make
+* Run 
+```ruby
+	catkin_make
+```
 
 * Install ROS for your Arduino, [see here for Instruction](http://wiki.ros.org/rosserial_arduino/Tutorials/Arduino%20IDE%20Setup) 
 * Copy the BraccioLibRos Library into your Arduino Library Folder
@@ -43,8 +46,8 @@ Launches Roscore, that handles communictation between all ROS nodes.
 ### Terminal 2:
 ```ruby
 	source devel/setup.bash
-	cd src/braccio_arduino_ros_gazebo
-	roslaunch braccio_arduino_ros_gazebo urdf.launch model:=urdf/braccio_arm.urdf
+	cd src/braccio_arduino_ros_rviz
+	roslaunch braccio_arduino_ros_rviz urdf.launch model:=urdf/braccio_arm.urdf
 ```
 
 Starts the GUI and publishes angles in Radian.
@@ -52,8 +55,8 @@ Starts the GUI and publishes angles in Radian.
 ### Terminal 3:
 ```ruby
 	source devel/setup.bash
-	cd src/braccio_arduino_ros_gazebo
-	rosrun braccio_arduino_ros_gazebo parse_and_publish
+	cd src/braccio_arduino_ros_rviz
+	rosrun braccio_arduino_ros_rviz parse_and_publish
 ```
 
 Converts the joint angles to degrees and reduces the message size 
