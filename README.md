@@ -22,7 +22,7 @@ This project enables to control the joint angles of Braccio from a GUI.
 * [Braccio Robot](https://store.arduino.cc/tinkerkit-braccio)
 
 ## Hardware Architecture
-![Hardware Architecture](DEmo/HardwareArchitecture.jpg)
+![Hardware Architecture](Demo/HardwareArchitecture.jpg)
 
 ## Setup
 * Install ROS on your PC.
