@@ -5,6 +5,7 @@ Project on the integration of the Arduino robotic arm Braccio into ROS and Rviz.
 
 This project enables to control the joint angles of Braccio from a GUI.
 
+
 ## Want to say thanks
 
  This code is free and can be used for free, open source and commercial applications. If you want to say thanks mainly hit the :star: button, that's all. 
@@ -19,6 +20,9 @@ This project enables to control the joint angles of Braccio from a GUI.
 * Ubuntu (16.04)
 * Arduino (Uno or higher)
 * [Braccio Robot](https://store.arduino.cc/tinkerkit-braccio)
+
+## Hardware Architecture
+![Hardware Architecture](DEmo/HardwareArchitecture.jpg)
 
 ## Setup
 * Install ROS on your PC.
